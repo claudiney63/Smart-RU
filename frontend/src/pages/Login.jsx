@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -19,6 +18,7 @@ const Login = () => {
         password,
       });
       console.log(response.data);
+      setIsLogin(true)
       navigate("/users");
     } catch (error) {
       console.error("Erro ao fazer login:", error);

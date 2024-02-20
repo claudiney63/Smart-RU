@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Container, Nav, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { NavDropdown } from "react-bootstrap";
 import SmartRU from "../images/SmartRU.jpg";
 
 const NavBar = () => {
@@ -40,28 +41,18 @@ const NavBar = () => {
             >
               Registrar-se
             </Link>
-            <Link style={{ color: "white" }} to="/cards" className="nav-link">
-              Cards
-            </Link>
-            <Link
-              style={{ color: "white" }}
-              to="/card-register"
-              className="nav-link"
-            >
-              Registrar Card
-            </Link>
-            <Link style={{ color: "white" }} to="/users" className="nav-link">
-              Usuarios
-            </Link>
-            <Link style={{ color: "white" }} to="/deposit" className="nav-link">
-              Depositar
-            </Link>
-            <Link style={{ color: "white" }} to="/payment" className="nav-link">
-              Pagar
-            </Link>
-            <Link style={{ color: "white" }} to="/card-linking" className="nav-link">
-              Vincular Card
-            </Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/users">Usuarios</NavDropdown.Item>
+              <NavDropdown.Item href="/cards">Cards</NavDropdown.Item>
+              <NavDropdown.Item href="/card-register">
+                Cadastrar Card
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/card-linking">
+                Relacionar Card
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/deposit">Depositar</NavDropdown.Item>
+              <NavDropdown.Item href="/payment">Pagamento</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
