@@ -2,6 +2,8 @@
 
 Este projeto consiste em uma aplicação web chamada SmartRU, que é uma plataforma de gestão de refeições em residências universitárias. A aplicação possui diversos componentes criados com React e Bootstrap React para lidar com diferentes funcionalidades, como login, registro, depósito, pagamento, entre outros. A construção da api está voltada ao uso da ferramenta Django da linguagem python.
 
+![SmartRU](https://github.com/claudiney63/Smart-RU/assets/40923082/f3c17bc6-20c3-4685-acb3-38843db30a12)
+
 ## Componentes
 
 Aqui está uma descrição dos principais componentes da aplicação:
