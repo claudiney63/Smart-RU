@@ -1,6 +1,6 @@
 # Aplicação SmartRU
 
-Este projeto consiste em uma aplicação web chamada SmartRU, que é uma plataforma de gestão de refeições em residências universitárias. A aplicação possui diversos componentes criados com React e Bootstrap React para lidar com diferentes funcionalidades, como login, registro, depósito, pagamento, entre outros.
+Este projeto consiste em uma aplicação web chamada SmartRU, que é uma plataforma de gestão de refeições em residências universitárias. A aplicação possui diversos componentes criados com React e Bootstrap React para lidar com diferentes funcionalidades, como login, registro, depósito, pagamento, entre outros. A construção da api está voltada ao uso da ferramenta Django da linguagem python.
 
 ## Componentes
 
@@ -24,7 +24,7 @@ O componente Deposit é um formulário onde os usuários podem fazer depósitos 
 
 ### Payment
 
-O componente PaymentForm é um formulário onde os usuários podem fazer pagamentos usando seus cartões de refeição. Ele contém campos para o ID do cartão e o valor do pagamento, além de um botão de pagamento.
+O componente Payment é um formulário onde os usuários podem fazer pagamentos usando seus cartões de refeição. Ele contém campos para o ID do cartão e o valor do pagamento, além de um botão de pagamento.
 
 ### CardLinking
 
