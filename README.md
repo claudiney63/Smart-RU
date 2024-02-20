@@ -6,7 +6,7 @@ Este projeto consiste em uma aplicação web chamada SmartRU, que é uma platafo
 
 ## Componentes
 
-Aqui está uma descrição dos principais componentes da aplicação:
+Em seguida está uma descrição dos principais componentes da aplicação:
 
 ### NavBar
 
