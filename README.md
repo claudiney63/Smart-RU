@@ -45,7 +45,7 @@ Para executar a aplicação SmartRU localmente, siga estas etapas:
 
 ## Django Views
 
-Além dos componentes React, a aplicação SmartRU também possui partes implementadas em Python usando Django. Aqui estão algumas das views Django:
+Além dos componentes React, a aplicação SmartRU também possui partes implementadas em Python usando Django.
 
 ### Login
 
