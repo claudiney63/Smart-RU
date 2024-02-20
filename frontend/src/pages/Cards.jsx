@@ -36,7 +36,7 @@ const Cards = () => {
               {cards.map((card) => (
                 <tr key={card.id}>
                   <td>{card.id}</td>
-                  <td>{`R$ ${parseFloat(card.balance).toPrecision(4)}`}</td>
+                  <td>{`R$ ${parseFloat(card.balance).toPrecision(3)}`}</td>
                 </tr>
               ))}
             </tbody>
