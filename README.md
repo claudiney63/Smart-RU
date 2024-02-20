@@ -6,7 +6,7 @@ Este projeto consiste em uma aplicação web chamada SmartRU, que é uma platafo
 
 ## Componentes
 
-Aqui está uma descrição dos principais componentes da aplicação:
+Em seguida está uma descrição dos principais componentes da aplicação:
 
 ### NavBar
 
@@ -41,11 +41,11 @@ Para executar a aplicação SmartRU localmente, siga estas etapas:
 3. Execute o projeto com `npm start`.
 4. Acesse a aplicação em seu navegador usando o endereço `http://localhost:3000`.
 
-![image](https://github.com/claudiney63/Smart-RU/assets/40923082/e039420f-4f9e-480b-a8ea-3fca39d12d48)
+![image](https://github.com/claudiney63/Smart-RU/assets/40923082/cc2215d0-c1e0-4fbd-bbf8-9c1c903ed6e8)
 
 ## Django Views
 
-Além dos componentes React, a aplicação SmartRU também possui partes implementadas em Python usando Django. Aqui estão algumas das views Django:
+Além dos componentes React, a aplicação SmartRU também possui partes implementadas em Python usando Django.
 
 ### Login
 
