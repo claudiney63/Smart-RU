@@ -12,17 +12,19 @@ const Payment = () => {
 
   const navigate = useNavigate();
 
+  const BASE_URL = "http://127.0.0.1:8080";
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setError(null);
     try {
-      const response = await axios.post("/api/pay", {
+      const response = await axios.post(`${BASE_URL}/payment/`, {
         card_id: cardId,
-        amount: amount,
+        amount: parseFloat(amount).toPrecision(2),
       });
       console.log(response.data);
       setSuccess(true);
-      navigate("/users");
+      navigate("/cards");
     } catch (error) {
       console.error("Erro ao fazer pagamento:", error);
       if (error.response && error.response.status === 404) {

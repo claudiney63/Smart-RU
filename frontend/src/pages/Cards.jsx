@@ -5,17 +5,13 @@ import { Table, Container, Row, Col } from "react-bootstrap";
 const Cards = () => {
   const [cards, setCards] = useState([]);
 
-  const cartoes = [
-    { id: 1, balance: 100 },
-    { id: 2, balance: 200 },
-    { id: 3, balance: 300 },
-    { id: 4, balance: 400 },
-  ];
+  const BASE_URL = "http://localhost:8080";
 
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await axios.get("/api/cards");
+        const response = await axios.get(`${BASE_URL}/cards/`);
+        console.log(response.data);
         setCards(response.data);
       } catch (error) {
         console.error("Erro ao carregar cartões:", error);
@@ -37,10 +33,10 @@ const Cards = () => {
               </tr>
             </thead>
             <tbody>
-              {cartoes.map((card) => (
+              {cards.map((card) => (
                 <tr key={card.id}>
                   <td>{card.id}</td>
-                  <td>{`R$ ${card.balance}`}</td>
+                  <td>{`R$ ${parseFloat(card.balance).toPrecision(4)}`}</td>
                 </tr>
               ))}
             </tbody>

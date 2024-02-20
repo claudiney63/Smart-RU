@@ -7,14 +7,19 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const BASE_URL = "http://localhost:8080";
+
   const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/login/", { email, password });
-      console.log(response.data); 
-        navigate("/users");
+      const response = await axios.post(`${BASE_URL}/login/`, {
+        email,
+        password,
+      });
+      console.log(response.data);
+      navigate("/users");
     } catch (error) {
       console.error("Erro ao fazer login:", error);
     }
@@ -55,12 +60,7 @@ const Login = () => {
                   />
                 </div>
                 <button type="submit" className="btn btn-primary">
-                  <Link
-                    to="/user"
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
-                    Entrar
-                  </Link>
+                  Entrar
                 </button>
               </form>
             </div>

@@ -40,6 +40,28 @@ const NavBar = () => {
             >
               Registrar-se
             </Link>
+            <Link style={{ color: "white" }} to="/cards" className="nav-link">
+              Cards
+            </Link>
+            <Link
+              style={{ color: "white" }}
+              to="/card-register"
+              className="nav-link"
+            >
+              Registrar Card
+            </Link>
+            <Link style={{ color: "white" }} to="/users" className="nav-link">
+              Usuarios
+            </Link>
+            <Link style={{ color: "white" }} to="/deposit" className="nav-link">
+              Depositar
+            </Link>
+            <Link style={{ color: "white" }} to="/payment" className="nav-link">
+              Pagar
+            </Link>
+            <Link style={{ color: "white" }} to="/card-linking" className="nav-link">
+              Vincular Card
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

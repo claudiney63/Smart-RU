@@ -23,20 +23,18 @@ const Users = ({ email }) => {
   return (
     <Container className="mt-5">
       <div className="mt-5">
-        {userData.map((user)=> {
+        {userData.map((user) => {
           return (
-            <Card>
-            <Card.Body>
-              <Card.Title>{user.name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">
-                {user.email}
-              </Card.Subtitle>
-              {user.card_id && (
-                <Card.Text>Card ID: {user.card_id}</Card.Text>
-              )}
-            </Card.Body>
-          </Card>
-          )
+            <Card className="mt-3">
+              <Card.Body>
+                <Card.Title>{user.name}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  {user.email}
+                </Card.Subtitle>
+                {user.card_id && <Card.Text>Card ID: {user.card_id}</Card.Text>}
+              </Card.Body>
+            </Card>
+          );
         })}
       </div>
     </Container>

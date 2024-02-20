@@ -8,13 +8,15 @@ const CardRegister = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
+  const BASE_URL = "http://localhost:8080";
+
   const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setError(null);
     try {
-      const response = await axios.post('/api/card_register', { id: cardId });
+      const response = await axios.post(`${BASE_URL}/card_register/`, { id: cardId });
       console.log(response.data);
       setSuccess(true);
       navigate('/cards');

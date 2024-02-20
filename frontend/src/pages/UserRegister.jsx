@@ -13,11 +13,13 @@ const UserRegister = () => {
 
   const navigate = useNavigate();
 
+  const BASE_URL = "http://localhost:8080";
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setError(null);
     try {
-      const response = await axios.post("/api/user_register", {
+      const response = await axios.post(`${BASE_URL}/user_register/`, {
         name,
         email,
         password,

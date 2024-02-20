@@ -17,10 +17,10 @@ const CardLinking = () => {
     e.preventDefault();
     setError(null);
     try {
-      const response = await axios.post(`${BASE_URL}/card_linking`, { email, card_id: cardId });
+      const response = await axios.post(`${BASE_URL}/card_linking/`, { email, card_id: cardId });
       console.log(response.data);
       setSuccess(true);
-    //   navigate('/users');
+      navigate('/users');
     } catch (error) {
       console.error('Erro ao vincular cartão:', error);
       setError('Erro ao vincular cartão. Verifique o e-mail e o ID do cartão e tente novamente.');

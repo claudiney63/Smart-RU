@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Container, Row, Col, Alert } from "react-bootstrap";
 import axios from "axios";
 import { InputGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Deposit = () => {
   const [cardId, setCardId] = useState("");
@@ -9,16 +10,21 @@ const Deposit = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
+  const BASE_URL = "http://localhost:8080";
+
+  const navigate = useNavigate();
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setError(null);
     try {
-      const response = await axios.post("/api/deposit", {
+      const response = await axios.post(`${BASE_URL}/deposit/`, {
         card_id: cardId,
-        amount: amount,
+        amount: parseFloat(amount),
       });
       console.log(response.data);
       setSuccess(true);
+      navigate("/cards");
     } catch (error) {
       console.error("Erro ao fazer depósito:", error);
       if (error.response && error.response.status === 404) {
