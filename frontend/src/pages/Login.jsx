@@ -18,7 +18,6 @@ const Login = () => {
         password,
       });
       console.log(response.data);
-      setIsLogin(true)
       navigate("/users");
     } catch (error) {
       console.error("Erro ao fazer login:", error);
