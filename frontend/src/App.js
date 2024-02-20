@@ -19,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login></Login>} />
           <Route path="/register" element={<UserRegister></UserRegister>} />
           <Route path="/users" element={<Users></Users>} />
+          <Route path="/" element={<Users></Users>} />
           <Route
             path="/card-register"
             element={<CardRegister></CardRegister>}
