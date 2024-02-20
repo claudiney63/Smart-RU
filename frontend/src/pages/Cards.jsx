@@ -19,7 +19,7 @@ const Cards = () => {
     };
 
     fetchCards();
-  }, []);
+  }, [cards]);
 
   return (
     <Container className="mt-5">

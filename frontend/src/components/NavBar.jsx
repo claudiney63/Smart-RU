@@ -51,7 +51,7 @@ const NavBar = () => {
                 Relacionar Card
               </NavDropdown.Item>
               <NavDropdown.Item href="/deposit">Depositar</NavDropdown.Item>
-              <NavDropdown.Item href="/payment">Pagamento</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/payment">Pagamento</NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
