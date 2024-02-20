@@ -124,17 +124,4 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:8000",
-]
-
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-]
-
-CORS_ORIGIN_WHITELIST = [
-    "http://127.0.0.1:8000",
-]
-
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY = True
+ALLOWED_HOSTS = ["*"]

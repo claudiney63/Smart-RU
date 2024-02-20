@@ -16,8 +16,8 @@ def users(request):
     return HttpResponse(json.dumps(response), content_type="application/json")
 
 
-def user(request, email):
-    user = User.objects.get(email=email)
+def user(request, id):
+    user = User.objects.get(id=id)
     response = {
         "name": user.name,
         "email": user.email,
@@ -98,17 +98,16 @@ def card_linking(request):
 
 def pay(request):
     body = json.loads(request.body.decode("utf-8"))
-    card_id = body["card_id"]
+    card_id = body["card_id"].replace(" ", "")
     amount = body["amount"]
+    # id = Card.objects.all()[0].id.replace(" ", "")
     if not Card.objects.filter(id=card_id):
         return HttpResponse(status=404)
     elif Card.objects.get(id=card_id).balance < amount:
         return HttpResponse(status=402)
     else:
         card = Card.objects.get(id=card_id)
-        print(amount)
         card.balance = card.balance - amount
-        print(card.balance)
         card.save()
         return HttpResponse()
 
